@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 14
+VisualStudioVersion = 14.0.22310.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.PluralsightKinecting.CSharp.Plugins", "UnityVS.PluralsightKinecting.CSharp.Plugins.csproj", "{96E82943-E7C0-238E-0E34-00639FF42E19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.PluralsightKinecting.CSharp", "UnityVS.PluralsightKinecting.CSharp.csproj", "{6C4F2B46-FC03-E52F-7B6E-FF6F30674FDD}"

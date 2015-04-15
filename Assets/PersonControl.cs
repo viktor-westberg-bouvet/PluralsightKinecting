@@ -3,7 +3,7 @@ using System.Linq;
 using Windows.Kinect;
 using UnityEngine;
 
-public class KinectControl : MonoBehaviour
+public class PersonControl : MonoBehaviour
 {
 	private KinectSensor _sensor;
 	private BodyFrameReader _reader;
@@ -64,7 +64,6 @@ public class KinectControl : MonoBehaviour
 		frame.Dispose();
 		frame = null;
 
-
 		var body = _data.SingleOrDefault(x => x.TrackingId == TrackingId);
 
 		if (body == null) return;
@@ -74,33 +73,5 @@ public class KinectControl : MonoBehaviour
 		Spine.UpdateBody(body);
 		LeftLeg.UpdateBody(body);
 		RightLeg.UpdateBody(body);
-
-		//if (body.HandRightState != HandState.Closed)
-		//{
-		//	gameObject.transform.position = body.Joints[JointType.HandRight].Position.ToVector()*10;
-		//}
-		//if (body.HandLeftState != HandState.Closed)
-		//{
-		//	var angley =
-		//		body.Joints[JointType.HandLeft].Position.X;
-		//	var anglex =
-		//		body.Joints[JointType.HandLeft].Position.Y;
-		//	var anglez =
-		//		body.Joints[JointType.HandLeft].Position.Z;
-
-		//	gameObject.transform.rotation =
-		//		Quaternion.Euler(
-		//			gameObject.transform.rotation.x + anglex*100,
-		//			gameObject.transform.rotation.y + angley*100,
-		//			gameObject.transform.rotation.z + anglez*100);
-		//}
-	}
-}
-
-public static class CameraSpacePointExtensions
-{
-	public static Vector3 ToVector(this CameraSpacePoint point)
-	{
-		return new Vector3(point.X, point.Y, point.Z)*6;
 	}
 }

@@ -67,5 +67,7 @@
     <Compile Include="Assets\LimbRenderer.cs" />
     <Compile Include="Assets\KinectPersonMapper.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
+  <Import Condition="'$(VisualStudioVersion)' == 11.0" Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2012\UnityVS.CSharp.targets" />
+  <Import Condition="'$(VisualStudioVersion)' == 12.0" Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
+  <Import Condition="'$(VisualStudioVersion)' == 14.0" Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
